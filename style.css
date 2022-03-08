@@ -1,0 +1,96 @@
+.name {
+    box-sizing: content-box;
+}
+
+.purchase>div {
+    justify-content: center;
+}
+
+.service-satisfaction div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.recommendation-satisfaction div {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    align-items: center;
+}
+
+.title-row {
+  height: 7rem;
+align-items: center;
+}
+
+.title-row>div {
+  transform: rotate(-90deg);
+
+}
+
+@media (min-width: 768px) {
+  .title-row>div {
+    transform: rotate(0deg);
+  }
+
+  .title-row {
+    height: 2rem;
+    align-items: center;
+  }
+}
+
+.star {
+  color: red;
+}
+
+.purchase, .company-overall, .buy-again, .company-recommendation{
+    background-color: lightgrey;
+
+}
+
+.service-satisfaction div{
+    text-align: center;
+}
+
+.service-satisfaction label, .recommendation-satisfaction label {
+  text-align: left;
+}
+
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    margin: 0;
+    padding 0px;
+  }
+  .rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+  }
+  .rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+  }
+  .rate:not(:checked) > label:before {
+    content: "★ ";
+  }
+  .rate > input:checked ~ label {
+    color: #ffc700;
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+  }
